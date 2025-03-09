@@ -22,3 +22,31 @@ sudo ./gradlew installDist
 
 1) prepare_config.ipynb to generate the configuration files.
 2) local_simulation.ipynb to run the simulation.
+
+
+config/system.config contains editable parameters for the code. config/workloads/workload determines the workload for the code.
+
+
+
+
+### Impact of reconfiguration frequency
+
+<img src="reconfig_plots/r1.png" alt="Image" style="height:300px;"/>
+<img src="reconfig_plots/r2.png" alt="Image" style="height:300px;"/>
+
+<div style="max-width: 600px; margin: left;">
+Here, we illustrate the effect of the frequency of reconfigurations on the throughput and latency of Ava-Bftsmart. We experiment on a system with two clusters, where each has 10 replicas, and each has a client that issues transaction requests and another client that issues an increased load of reconfiguration requests. Reconfigurations begin at approximately 80 seconds. 
+We experiment with two frequencies:
+(1) once every 20 seconds, and
+(2) continuously, without any delay between reconfiguration requests.
+</div>
+
+### Impact of Network Latency
+
+<img src="reconfig_plots/r3.png" alt="Image" style="height:300px;"/>
+<img src="reconfig_plots/r4.png" alt="Image" style="height:300px;"/>
+
+<div style="max-width: 600px; margin: left;">
+Here, we experiment on a system with two clusters where each has 10 replicas, and each has a client that issues reconfiguration requests. We fixed one cluster at us-west1-b, and experimented with several locations for the second cluster: us-east5-c, asia-northeast1-b, europe-west3-c, and asia-south1-c, with latencies of 52ms, 91ms, 142ms, and 219ms to the first cluster, respectively. 
+As the network latency increases, the inter-cluster communication (in phase 2) dominates the performance, and the impact of reconfigurations (in phase 1) diminishes.
+</div>
