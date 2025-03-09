@@ -50,5 +50,4 @@ We experiment with two frequencies:
 
 <div style="max-width: 600px; margin: left;">
 Here, we experiment on a system with two clusters where each has 10 replicas, and each has a client that issues reconfiguration requests. We fixed one cluster at us-west1-b, and experimented with several locations for the second cluster: us-east5-c, asia-northeast1-b, europe-west3-c, and asia-south1-c, with latencies of 52ms, 91ms, 142ms, and 219ms to the first cluster, respectively. 
-As the network latency increases, the inter-cluster communication (in phase 2) dominates the performance, and the impact of reconfigurations (in phase 1) diminishes.
 </div>
