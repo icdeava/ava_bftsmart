@@ -31,8 +31,9 @@ config/system.config contains editable parameters for the code. config/workloads
 
 ### Impact of reconfiguration frequency
 
-<img src="reconfig_plots/r1.png" alt="Image" style="height:300px;"/>
-<img src="reconfig_plots/r2.png" alt="Image" style="height:300px;"/>
+<img src="reconfig_plots/r1.png" alt="Image" style="width:400px;"/>
+
+<img src="reconfig_plots/r2.png" alt="Image" style="width:400px;"/>
 
 <div style="max-width: 600px; margin: left;">
 Here, we illustrate the effect of the frequency of reconfigurations on the throughput and latency of Ava-Bftsmart. We experiment on a system with two clusters, where each has 10 replicas, and each has a client that issues transaction requests and another client that issues an increased load of reconfiguration requests. Reconfigurations begin at approximately 80 seconds. 
@@ -43,8 +44,9 @@ We experiment with two frequencies:
 
 ### Impact of Network Latency
 
-<img src="reconfig_plots/r3.png" alt="Image" style="height:300px;"/>
-<img src="reconfig_plots/r4.png" alt="Image" style="height:300px;"/>
+<img src="reconfig_plots/r3.png" alt="Image" style="width:400px;"/>
+
+<img src="reconfig_plots/r4.png" alt="Image" style="width:400px;"/>
 
 <div style="max-width: 600px; margin: left;">
 Here, we experiment on a system with two clusters where each has 10 replicas, and each has a client that issues reconfiguration requests. We fixed one cluster at us-west1-b, and experimented with several locations for the second cluster: us-east5-c, asia-northeast1-b, europe-west3-c, and asia-south1-c, with latencies of 52ms, 91ms, 142ms, and 219ms to the first cluster, respectively. 
